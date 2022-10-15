@@ -2,57 +2,62 @@
 const menu = [
     {
         id: 1,
-        title: "buttermilk pancakes",
-        category: "breakfast",
-        price: 15.99,
-        img: "./images/buttermilk.jpeg",
-        desc: 'Ronaldinho penta liberta flamengo uma vez pra sempre Flamengo aqui é flamengo campeao do mundo vamos meu Flamengo',
+        title: "Mundial interclubes - 1981",
+        category: "World Cup",
+        img: "./images/mundial.jpg",
+        desc: 'Clube de Regatas Flamengo becomes champion of the Intercontinental Cup (also known as Interclub World Cup) for the first time, beating Liverpool 3-0.',
     },
     {
         id: 2, 
-        title: "diner double",
-        category: "lunch",
-        price: 13.99,
-        img: "./images/doubledinner.jpeg",
-        desc: 'cyberpunk 2077 blade runner 2048 ronaldinho soccer 98 brasil hexacampeão 2022',
+        title: "Taça Libertadores da América - 1981 e 2019",
+        category: "Continental",
+        img: "./images/libertadores.jpg",
+        desc: 'The Taça Libertadores da América is the main football competition between professional clubs in South America (CONMEBOL) since 1960.',
     },
     {
         id: 3,
-        title: "godzilla milkshake",
-        category: "shakes",
-        price: 6.99,
-        img: "./images/godzilla.jpg",
-        desc:  'vs superman vs boruto naruto goku vaitomanocu ronaldinho cucucucucu alalalala rororo llelelelelleleeleladjhvgasoiho',
+        title: "Campeonato Brasileiro (8 titles) - 1980, 1982, 1983, 1987, 1992, 2009, 2019 e 2020",
+        category: "National",
+        img: "./images/brasileiro.jpg",
+        desc:  'The Campeonato Brasileiro de Futebol, is the Brazilian professional football league between clubs in Brazil, being the main football competition in the country.'
     },
     {
         id: 4,
-        title: "country delight",
-        category: "breakfast",
-        price: 20.99,
-        img: "./images/baconzito.jpg",
-        desc: "Uma frase aleatória pode ajudá-lo a encontrar características específicas que você pode não ter considerado se estiver tentando criar um novo conceito, ideia ou produto.",   
+        title: 'Copa do Brasil - 1990 (undefeated), 2006 e 2013',
+        category: "National",
+        img: "./images/brasil13.jpg",
+        desc:  'The Copa do Brasil de Futebol, known simply as Copa do Brasil, is a national football competition in Brazil.',
+    },
+    {
+        id: 5,
+        title: "Campeonato Carioca - (37 titles) 1914, 1915 (undefeated) 1920 (undefeated), 1921, 1925, 1927, 1939, 1942, 1943, 1944...",
+        category: "Regional",
+        img: "./images/carioca.jpg",
+        desc: "Campeonato Carioca de Futebol, is the main competition between football teams in the state of Rio de Janeiro, in Brazil",   
     }
 ];
+
+//console.log(menu[2].title) --- ACHAR UM ATRIBUTO(ID/TITLE/CATEGORY/...) DENTRO DO OBJETO NO ARRAY
 
 const sectionCenter = document.querySelector('.section-center');
 const container = document.querySelector(".btn-container")
 
 
 //load items
-window.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("DOMContentLoaded", function(){  // WINDOW SERVE PRA CHAMAR QQR FUNCTION NO JS REFERENTE A DOM
     displayMenuItems(menu) 
     displayMenuButtons()
 })
 
-function displayMenuItems(menuItems){    
-    let displayMenu = menuItems.map(function(item){
+function displayMenuItems(menuItems){   // menuItems é um PARÂMETRO 
+
+    let displayMenu = menuItems.map((item) => { 
 
         return `<article class="menu-item">
         <img src=${item.img} class="photo" alt=${item.title} />
         <div class="item-info">
             <header>
             <h4>${item.title}</h4>
-            <h4 class="price">$${item.price}</h4>
         </header>
         <p class="item-text">
           ${item.desc}
