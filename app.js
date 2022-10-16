@@ -3,7 +3,7 @@ const menu = [
     {
         id: 1,
         title: "Mundial interclubes - 1981",
-        category: "World Cup",
+        category: "WorldCup",
         img: "./images/mundial.jpg",
         desc: 'Clube de Regatas Flamengo becomes champion of the Intercontinental Cup (also known as Interclub World Cup) for the first time, beating Liverpool 3-0.',
     },

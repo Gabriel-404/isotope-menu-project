@@ -129,6 +129,7 @@ p {
   }
   body {
     font-size: 1rem;
+    margin-bottom: 30px;
   }
   h1,
   h2,
@@ -174,7 +175,9 @@ Menu
 */
 
 .menu {
-  padding: 5rem 0;
+  padding: 5rem;
+  padding-bottom: 200px;
+  height: 1;
 }
 .title {
   FONT-WEIGHT: 500;
@@ -274,10 +277,18 @@ Menu
 }
 
 .contacts_list {
+  width: 100%;
   list-style-type: none;
-padding-left: 1px;
+  padding-left: 1px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  /* bottom: 2px; */
 }
 
 .contacts_list li a {
   color: #000;
+  margin: 4px;
+
 }
+
